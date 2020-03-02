@@ -9,10 +9,10 @@ const requireComponent = require.context(
   // Se deve ou não olhar subpastas
   false,
   // Expressão regular para localizar nomes de componentes base
-  /[A-Z]\w+\.(vue|js)$/
+  /[A-Z]\w+\.(vue|js)$/,
 )
 
-requireComponent.keys().forEach(fileName => {
+requireComponent.keys().forEach((fileName) => {
   // Pega a configuração do componente
   const componentConfig = requireComponent(fileName)
 
@@ -23,8 +23,8 @@ requireComponent.keys().forEach(fileName => {
       fileName
         .split('/')
         .pop()
-        .replace(/\.\w+$/, '')
-    )
+        .replace(/\.\w+$/, ''),
+    ),
   )
 
   // Registra o componente globalmente
@@ -33,12 +33,12 @@ requireComponent.keys().forEach(fileName => {
     // Olha para as opções em `.default`, existentes
     // se o componente foi exportado com `export default`,
     // caso contrário usa o módulo raiz.
-    componentConfig.default || componentConfig
+    componentConfig.default || componentConfig,
   )
 })
 
 new Vue({
-  render: h => h(App),
+  render: (h) => h(App),
 }).$mount('#app')
 
 /*  new Vue({
