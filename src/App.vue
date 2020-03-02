@@ -10,6 +10,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-  @import 'styles/Reset.scss';
+<style lang="scss">
+  @import 'styles/App.scss';
 </style>
