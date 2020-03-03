@@ -66,6 +66,21 @@
         ]"
       />
     </vue-section>
+    <!-- <vue-slider
+      :images="[
+        '/img/Foto1.jpg',
+        '/img/Foto2.jpg',
+        '/img/Foto3.jpg',
+        '/img/Foto4.jpg',
+        '/img/Foto5.jpg',
+        '/img/Foto6.jpg',
+        '/img/Foto7.jpg',
+        '/img/Foto8.jpg',
+      ]"
+    /> -->
+    <vue-section>
+      <vue-card />
+    </vue-section>
   </div>
 </template>
 
@@ -75,11 +90,12 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @import '@styles';
   #app {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 300px;
   }
 </style>

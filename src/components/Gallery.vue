@@ -1,19 +1,19 @@
 <template>
-  <div class="container">
-    <a class="container__gallery">
+  <div class="gallery">
+    <a class="gallery__block">
       <div
         v-for="(pic, index) in pics"
         :key="index"
-        class="container__pic transition"
+        class="gallery__pic transition"
         :class="selectedPic === index ? 'colored' : null"
         @click="() => handleClick(index)"
       >
         <img
           :src="pic.src"
         >
-        <!-- <div class="container__pic__overlay" /> -->
+        <!-- <div class="gallery__pic__overlay" /> -->
         <p
-          class="container__pic__label"
+          class="gallery__pic__label"
         >
           {{ pic.label }}
         </p>
@@ -22,11 +22,11 @@
     <div
       v-for="(pic, index) in pics"
       :key="index"
-      class="container__text"
+      class="gallery__text"
     >
       <div
         v-if="selectedPic === index"
-        class="container__text__show animated fadeIn"
+        class="gallery__text__show animated fadeIn"
       >
         <vue-title>
           {{ pic.title }}
@@ -36,7 +36,6 @@
         </vue-description>
       </div>
     </div>
-    <vue-slider />
   </div>
 </template>
 
@@ -68,14 +67,14 @@ export default {
 
 <style lang="scss" scoped>
   @import '@styles';
-  .container {
+  .gallery {
+    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
     background-color: transparent;
-    &__gallery {
+    &__block {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -87,7 +86,7 @@ export default {
       background-color: transparent;
       width: 256px;
       height: 270px;
-      margin: 7.5px;
+      padding: 7.5px;
       filter: saturate(0);
       cursor: pointer;
       &:hover {
