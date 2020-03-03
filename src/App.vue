@@ -167,6 +167,11 @@
         ]"
       />
     </vue-section>
+    <vue-banner
+      image="/images/foto16.jpg"
+      title="Quer receber nosso catálogo de novidades por email?"
+      label="SOLICITE"
+    />
   </div>
 </template>
 
