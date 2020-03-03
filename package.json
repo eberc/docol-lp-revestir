@@ -10,6 +10,7 @@
     "wc": "clear && vue-cli-service build --target wc --name vue-section src/components/*.vue"
   },
   "dependencies": {
+    "animate.css": "^3.7.2",
     "core-js": "^3.6.4",
     "normalize.css": "^8.0.1",
     "sass": "^1.26.2",
