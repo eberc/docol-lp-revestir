@@ -41,6 +41,7 @@ export default {
 
 <style lang="scss" scoped>
   @import '@styles';
+  @import '@styles/_ButtonReset.scss';
   .banner {
     position: relative;
     display: flex;
@@ -50,6 +51,10 @@ export default {
     height: 500px;
     width: 100%;
     height: 500px;
+    padding-bottom: 70px;
+    @include breakpoint(md) {
+      align-items: flex-end;
+    }
     &__wrapper {
       @extend %wrapper;
       align-items: flex-end;
@@ -79,6 +84,7 @@ export default {
       border-radius: 3px;
       padding: 0;
       margin: 0;
+      text-transform: uppercase;
       color: $text-light;
     }
   }
