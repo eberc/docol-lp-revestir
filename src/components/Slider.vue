@@ -39,19 +39,16 @@ export default {
     const mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
       loop: true,
-
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
       },
-
       // Navigation arrows
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
     })
-    console.log(mySwiper)
   },
 }
 </script>
@@ -60,7 +57,6 @@ export default {
   @import '@styles';
   .swiper-slide {
     width: 100%;
-    height: 600px;
   }
   .swiper-slide {
     img {
@@ -69,7 +65,6 @@ export default {
   }
   .swiper-container {
     width: 100%;
-    max-height: 600px;
   }
   .swiper-button-prev, .swiper-button-next {
     color: $white;

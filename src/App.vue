@@ -80,12 +80,88 @@
     /> -->
     <vue-section>
       <vue-title>Curiosidades</vue-title>
-      <vue-card
-        :card="{
-          icon: '/icons/icon1.svg',
-          title: 'SOBRE O STAND',
-          description: 'Nosso stand foi desenvolvido pelo Atelier do croata Marko Brajovic. Ainspiração deste ano foi a Natureza Urbana e cada espaço aborda um dosbiomas brasileiros. Esse conceito nasceu nas reuniões de briefing, durante asdiscussões sobre a importância do design, o Atelier propôs fazermos umahomenagem ao melhor de todos os designers: a natureza.',
-        }"
+      <vue-carousel
+        :cards="[
+          {
+            icon: '/icons/icon1.svg',
+            title: 'SOBRE O STAND',
+            description: 'Nosso stand foi desenvolvido pelo Atelier do croata Marko Brajovic. Ainspiração deste ano foi a Natureza Urbana e cada espaço aborda um dosbiomas brasileiros. Esse conceito nasceu nas reuniões de briefing, durante asdiscussões sobre a importância do design, o Atelier propôs fazermos umahomenagem ao melhor de todos os designers: a natureza.',
+          },
+          {
+            icon: '/icons/cidadania.svg',
+            title: 'REAPROVEITAMENTO DE ÁGUA',
+            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
+          },
+          {
+            icon: '/icons/qualidade_de_ar.svg',
+            title: 'PLANTAS BRASILEIRAS',
+            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
+          },
+          {
+            icon: '/icons/qualidade_de_ar.svg',
+            title: 'PLANTAS BRASILEIRAS',
+            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
+          },
+          {
+            icon: '/icons/qualidade_de_ar.svg',
+            title: 'PLANTAS BRASILEIRAS',
+            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
+          },
+        ]"
+      />
+    </vue-section>
+    <vue-section grey>
+      <vue-title>Agenda de Talks</vue-title>
+      <vue-description>
+        Estaremos na Revestir de 10 a 13 de março, das 10h às 19h. Venha tomar um
+        café conosco no espaço Pronto e não deixe de se programar para assistir
+        online ou pessoalmente nossa programação.
+      </vue-description>
+      <vue-carousel-talks
+        :cards="[
+          {
+            avatar: '/images/Foto9.jpg',
+            title: 'Experiência Gourmet com Bel Coelho',
+            description: 'A chef finalizará uma receita no nosso espaço gourmet. Vamos mostrartudo no nosso Instagram.',
+            date: '11 de março às 12h',
+          },
+          {
+            avatar: '/images/Foto10.jpg',
+            title: 'Cobertura Digital com Amanda Ferber',
+            description: 'A arquiteta responsável pelo canal Architecture Hunter contará sobresuas percepções do stand.',
+            date: '11 de março às 14h',
+          },
+          {
+            avatar: '/images/Foto11.jpg',
+            title: 'Experiência Gourmet com Leo Boto',
+            description: 'O chef trará uma de suas receitas com inspiração brasileira paramostrar em nosso espaço. Você também pode acompanhar no nosso Instagram.',
+            date: '12 de março às 12h',
+          },
+          {
+            avatar: '/images/Foto12.jpg',
+            title: 'Cobertura Digital com Patricia Pomerantzeff',
+            description: 'No comando dos canais Doma Arquitetura, Patricia nos fará uma visitae mostrará tudo o que gostou dos nossos lançamentos.',
+            date: '12 de março às 14h',
+          },
+          {
+            avatar: '/images/Foto13.jpg',
+            title: 'Drinks por Alê D´Agostino',
+            description: 'O especialista em drinks mostrará o preparo de receitas práticas cominspiração em ingredientes brasileiros. Não perca os detalhes, no nossoInstagram.',
+            date: '13 de março às 12h',
+          },
+          {
+            avatar: '/images/Foto14.jpg',
+            title: 'Cobertura Digital com André Bacalov',
+            description: 'Da Triart Arquitetura, André vem mostrar pra gente um pouco do nossoespaço através de seu olhar de arquiteto.',
+            date: '13 de março às 14h',
+          },
+          {
+            avatar: '/images/Foto15.jpg',
+            title: 'Cobertura Digital com Lucila Turqueto',
+            description: 'Com o cuidado e carinho que tem em todos os seus trabalhos, aresponsável pelo canal Casa de Valentina mostrará as novidades Docol paravocê.',
+            date: '14 de março às 14h',
+          },
+        ]"
       />
     </vue-section>
   </div>

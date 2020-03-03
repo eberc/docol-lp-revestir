@@ -86,7 +86,7 @@ export default {
       background-color: transparent;
       width: 256px;
       height: 270px;
-      padding: 7.5px;
+      margin: 7.5px;
       filter: saturate(0);
       cursor: pointer;
       &:hover {
