@@ -3,7 +3,7 @@
     class="section"
     :class="[
       grey ? 'section--grey' : null,
-      paddingBottom ? 'section--padding' : null
+      paddingBottom ? 'section--padding-bottom' : null
     ]"
   >
     <div class="section__wrapper">
@@ -38,7 +38,7 @@ export default {
     &--grey {
       background-color: $grey;
     }
-    &--padding {
+    &--padding-bottom {
       padding-bottom: 80px;
     }
     &__wrapper {

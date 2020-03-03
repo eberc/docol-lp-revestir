@@ -78,9 +78,7 @@
         '/images/Foto8.jpg',
       ]"
     /> -->
-    <vue-section
-      padding-bottom
-    >
+    <vue-section padding-bottom>
       <vue-title>Curiosidades</vue-title>
       <vue-carousel
         :cards="[
