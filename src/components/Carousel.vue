@@ -1,6 +1,9 @@
 <template>
   <!-- Slider main container -->
-  <div class="swiper-container">
+  <div
+    ref="swiper-carousel"
+    class="swiper-container"
+  >
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -37,8 +40,16 @@ export default {
       default: null,
     },
   },
+  data() {
+    return {
+      swiperElement: null,
+    }
+  },
+  created() {
+    this.swiperElement = this.$refs['swiper-carousel-talks']
+  },
   mounted() {
-    const mySwiper = new Swiper('.swiper-container', {
+    const mySwiper = new Swiper(this.swiperElement, {
       updateOnWindowResize: true,
       speed: 400,
       initialSlide: 0,
