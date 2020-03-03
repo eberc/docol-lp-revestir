@@ -28,7 +28,7 @@
     >
       <div
         v-if="selectedPic === index"
-        class="container__text__show"
+        class="container__text__show animated fadeIn"
       >
         <vue-title>
           {{ pic.title }}
@@ -78,6 +78,7 @@ export default {
     background-color: transparent;
     &__gallery {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background-color: $grey;
       width: 100%;
@@ -87,14 +88,11 @@ export default {
       background-color: transparent;
       width: 256px;
       height: 270px;
-      margin-right: 15px;
+      margin: 7.5px;
       filter: saturate(0);
       cursor: pointer;
       &:hover {
         filter: saturate(100%);
-      }
-      &:last-child {
-        margin-right: 0;
       }
       img {
         width: 256px;

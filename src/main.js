@@ -3,6 +3,7 @@ import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
 import App from './App.vue'
 import 'normalize.css'
+import 'animate.css'
 
 const requireComponent = require.context(
   // O caminho relativo da pasta de componentes
