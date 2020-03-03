@@ -9,12 +9,10 @@
         @click="() => handleClick(index)"
       >
         <img
-          :key="index"
           :src="pic.src"
         >
         <!-- <div class="container__pic__overlay" /> -->
         <p
-          :key="index"
           class="container__pic__label"
         >
           {{ pic.label }}
@@ -38,6 +36,7 @@
         </vue-description>
       </div>
     </div>
+    <vue-slider />
   </div>
 </template>
 
