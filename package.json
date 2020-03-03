@@ -6,7 +6,8 @@
     "dev": "clear && vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "wc": "vue-cli-service build --target wc --name lp-revestir src/components/*.vue"
+    "clear": "rm -rf /dist",
+    "wc": "clear && vue-cli-service build --target wc --name vue-section src/components/*.vue"
   },
   "dependencies": {
     "core-js": "^3.6.4",
@@ -21,6 +22,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.2.1",
     "imagemin-webpack-plugin": "^2.4.2",

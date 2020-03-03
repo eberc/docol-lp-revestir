@@ -30,7 +30,7 @@ requireComponent.keys().forEach((fileName) => {
 
   // Registra o componente globalmente
   Vue.component(
-    componentName || componentConfig.name,
+    componentConfig.default.name || componentName,
     // Olha para as opções em `.default`, existentes
     // se o componente foi exportado com `export default`,
     // caso contrário usa o módulo raiz.

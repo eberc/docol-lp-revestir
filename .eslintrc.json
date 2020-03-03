@@ -1,4 +1,33 @@
 {
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          [
+            "@",
+            "src"
+          ],
+          [
+            "@assets",
+            "src/assets/"
+          ],
+          [
+            "@components",
+            "src/components"
+          ],
+          [
+            "@sections",
+            "src/sections"
+          ],
+          [
+            "@styles",
+            "src/styles"
+          ]
+        ],
+        "extensions": [".vue", ".scss", ".js"]
+      }
+    }
+  },
   "env": {
     "browser": true,
     "es6": true,
@@ -12,6 +41,7 @@
     "plugin:vue/recommended"
   ],
   "rules": {
+    "import/no-unresolved": "off",
     "linebreak-style": [
       0,
       "error",
