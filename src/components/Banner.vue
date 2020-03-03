@@ -55,6 +55,7 @@ export default {
       align-items: flex-end;
     }
     &__title {
+      text-align: end;
       max-width: 470px;
       font-family: 'Muli';
       font-size: 35px;
