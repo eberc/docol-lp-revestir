@@ -42,6 +42,7 @@
   ],
   "rules": {
     "import/no-unresolved": "off",
+    "max-len": "off",
     "linebreak-style": [
       0,
       "error",
