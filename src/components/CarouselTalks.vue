@@ -40,19 +40,16 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      swiperElement: null,
-    }
-  },
-  created() {
-    this.swiperElement = this.$refs['swiper-carousel-talks']
-  },
   mounted() {
-    const mySwiper = new Swiper(this.swiperElement, {
+    const mySwiper = new Swiper(this.$refs['swiper-carousel-talks'], {
       updateOnWindowResize: true,
       speed: 400,
       initialSlide: 0,
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       // truewrapper adoptsheight of active slide
       autoHeight: false,
       // Optional parameters
@@ -61,11 +58,17 @@ export default {
       // delay between transitions in ms
       autoplayStopOnLast: false, // loop false also
       // If we need pagination
-      pagination: '.swiper-pagination',
-      paginationType: 'bullets',
       // breakpoints
-      slidesPerView: 2,
-      spaceBetween: 30,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        1066: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+      },
       // Navigation arrows
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
@@ -73,9 +76,6 @@ export default {
       // scrollbar: '.swiper-scrollbar',
       // "slide", "fade", "cube", "coverflow" or "flip"
       effect: 'slide',
-      // Distance between slides in px.
-      //
-      centeredSlides: true,
       //
       slidesOffsetBefore: 0,
     })
@@ -98,10 +98,4 @@ export default {
     color: $blue;
     transform: scale(0.5);
   }
-/*   .swiper-button-prev {
-    left: -25px;
-  }
-  .swiper-button-next {
-    right: -25px;
-  } */
 </style>

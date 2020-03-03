@@ -1,7 +1,10 @@
 <template>
   <section
     class="section"
-    :class="grey ? 'section--grey' : null"
+    :class="[
+      grey ? 'section--grey' : null,
+      paddingBottom ? 'section--padding' : null
+    ]"
   >
     <div class="section__wrapper">
       <slot />
@@ -14,6 +17,10 @@ export default {
   name: 'VueSection',
   props: {
     grey: {
+      type: Boolean,
+      default: false,
+    },
+    paddingBottom: {
       type: Boolean,
       default: false,
     },
@@ -30,6 +37,9 @@ export default {
     background-color: $white;
     &--grey {
       background-color: $grey;
+    }
+    &--padding {
+      padding-bottom: 80px;
     }
     &__wrapper {
       @extend %wrapper;

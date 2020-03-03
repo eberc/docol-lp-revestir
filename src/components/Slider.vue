@@ -1,6 +1,9 @@
 <template>
   <!-- Slider main container -->
-  <div ref="swiper-slider" class="swiper-container">
+  <div
+    ref="swiper-slider"
+    class="swiper-container"
+  >
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper">
       <!-- Slides -->
@@ -35,16 +38,8 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      swiperElement: null,
-    }
-  },
-  created() {
-    this.swiperElement = this.$refs['swiper-carousel-talks']
-  },
   mounted() {
-    const mySwiper = new Swiper(this.swiperElement, {
+    const mySwiper = new Swiper(this.$refs['swiper-slider'], {
     // Optional parameters
       loop: true,
       // If we need pagination

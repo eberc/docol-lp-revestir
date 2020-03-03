@@ -40,16 +40,8 @@ export default {
       default: null,
     },
   },
-  data() {
-    return {
-      swiperElement: null,
-    }
-  },
-  created() {
-    this.swiperElement = this.$refs['swiper-carousel-talks']
-  },
   mounted() {
-    const mySwiper = new Swiper(this.swiperElement, {
+    const mySwiper = new Swiper(this.$refs['swiper-carousel'], {
       updateOnWindowResize: true,
       speed: 400,
       initialSlide: 0,
@@ -61,7 +53,11 @@ export default {
       // delay between transitions in ms
       autoplayStopOnLast: false, // loop false also
       // If we need pagination
-      pagination: '.swiper-pagination',
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
       paginationType: 'bullets',
       // breakpoints
       breakpoints: {

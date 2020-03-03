@@ -78,7 +78,9 @@
         '/images/Foto8.jpg',
       ]"
     /> -->
-    <vue-section>
+    <vue-section
+      padding-bottom
+    >
       <vue-title>Curiosidades</vue-title>
       <vue-carousel
         :cards="[
@@ -110,7 +112,10 @@
         ]"
       />
     </vue-section>
-    <vue-section grey>
+    <vue-section
+      grey
+      padding-bottom
+    >
       <vue-title>Agenda de Talks</vue-title>
       <vue-description>
         Estaremos na Revestir de 10 a 13 de março, das 10h às 19h. Venha tomar um
