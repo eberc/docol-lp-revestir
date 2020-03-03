@@ -33,7 +33,12 @@ export default {
   .card {
     width: 345px;
     height: 425px;
-    border: 3px solid $grey;
+    border-radius: 3px;
+    border: 2px solid $grey;
+    @include breakpoint(sm){
+      width: 340px;
+      height: 415px;
+    }
     &__wrapper {
       @extend %wrapper;
       justify-content: flex-start;
@@ -49,7 +54,7 @@ export default {
       align-items: center;
       width: 100%;
       height: 130px;
-      border-bottom: 3px solid $grey;
+      border-bottom: 2px solid $grey;
     }
     &__text-container {
       display: flex;
@@ -60,6 +65,9 @@ export default {
         font-size: 14px;
         font-weight: 700;
         margin: 22px 0 25px 0;
+        @include breakpoint(md){
+          font-size: 13px;
+        }
       }
       &__description {
         font-family: 'Muli';
