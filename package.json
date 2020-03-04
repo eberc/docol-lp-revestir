@@ -2,6 +2,7 @@
   "name": "docol-revestir-lp",
   "version": "0.1.0",
   "private": true,
+  "main":"dist/vue.js",
   "scripts": {
     "dev": "clear && vue-cli-service serve",
     "build": "vue-cli-service build",

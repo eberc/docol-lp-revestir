@@ -41,9 +41,15 @@
 
 <script>
 import '@styles/_index.scss'
+import Title from '@components/Title.vue'
+import Description from '@components/Description.vue'
 
 export default {
   name: 'VueGallery',
+  components: {
+    'vue-title': Title,
+    'vue-description': Description,
+  },
   props: {
     pics: {
       type: Array,
