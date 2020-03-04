@@ -97,16 +97,6 @@
             title: 'PLANTAS BRASILEIRAS',
             description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
           },
-          {
-            icon: '/icons/qualidade_de_ar.svg',
-            title: 'PLANTAS BRASILEIRAS',
-            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
-          },
-          {
-            icon: '/icons/qualidade_de_ar.svg',
-            title: 'PLANTAS BRASILEIRAS',
-            description: 'São XX produtos Docol instalados dentro do stand, entre torneiras,misturadores, duchas e chuveiros. Esses produtos acionados todo o tempo,durante os 4 dias de feiras gastariam XX litros de água. Com essapreocupação, montamos um sistema de água recirculante, que reaproveita orecurso em todos os produtos possíveis. Com esse sistema garantimos quevocê possa ver nossos produtos em funcionamento, com a certeza de que nãohá desperdício.',
-          },
         ]"
       />
     </vue-section>
