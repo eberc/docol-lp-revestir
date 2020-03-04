@@ -113,6 +113,7 @@ export default {
         font-size: 20px;
         font-weight: 700;
         letter-spacing: -0.5px;
+        bottom: 60px;
         color: $text-light;
         margin: 0;
         @include breakpoint(md) {
