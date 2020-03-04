@@ -5,9 +5,9 @@
 yarn dev
 ```
 
-### Compiles and hot-reloads for development
+### Compiles web components
 ```
-yarn serve
+yarn wc
 ```
 
 ### Compiles and minifies for production
