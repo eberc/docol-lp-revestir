@@ -18,7 +18,10 @@
       </div>
     </div>
     <!-- If we need pagination -->
-    <div class="swiper-pagination" />
+    <div
+      v-if="width <= 768"
+      class="swiper-pagination"
+    />
 
     <!-- If we need navigation buttons -->
     <div
