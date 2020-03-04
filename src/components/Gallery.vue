@@ -96,9 +96,17 @@ export default {
         width: 256px;
         height: 270px;
       }
+      @include breakpoint(md) {
+        margin: 4.5px;
+        width: 152px;
+        height: 160px;
+        img {
+          width: 152px;
+          height: 160px;
+        }
+      }
       &__label {
         position: relative;
-        bottom: 70px;
         justify-content: center;
         text-align: center;
         font-family: 'Muli';
@@ -107,6 +115,10 @@ export default {
         letter-spacing: -0.5px;
         color: $text-light;
         margin: 0;
+        @include breakpoint(md) {
+          font-size: 14px;
+          bottom: 30px;
+        }
       }
     }
     &__text {

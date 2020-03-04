@@ -21,8 +21,14 @@
     <div class="swiper-pagination" />
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev" />
-    <div class="swiper-button-next" />
+    <div
+      v-if="width > 768"
+      class="swiper-button-prev"
+    />
+    <div
+      v-if="width > 768"
+      class="swiper-button-next"
+    />
 
     <!-- If we need scrollbar -->
     <!--     <div class="swiper-scrollbar"></div> -->
@@ -40,6 +46,11 @@ export default {
       default: null,
     },
   },
+  data() {
+    return {
+      width: window.innerWidth,
+    }
+  },
   mounted() {
     const mySwiper = new Swiper(this.$refs['swiper-carousel-talks'], {
       updateOnWindowResize: true,
@@ -49,6 +60,11 @@ export default {
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
       },
       // truewrapper adoptsheight of active slide
       autoHeight: false,
@@ -60,7 +76,7 @@ export default {
       // If we need pagination
       // breakpoints
       breakpoints: {
-        320: {
+        768: {
           slidesPerView: 1,
           spaceBetween: 0,
         },
@@ -72,9 +88,6 @@ export default {
       // Navigation arrows
       nextButton: '.swiper-button-next',
       prevButton: '.swiper-button-prev',
-      // And if we need scrollbar
-      // scrollbar: '.swiper-scrollbar',
-      // "slide", "fade", "cube", "coverflow" or "flip"
       effect: 'slide',
       //
       slidesOffsetBefore: 0,
@@ -90,9 +103,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    @include breakpoint(md) {
+      align-items: flex-start;
+    }
   }
   .swiper-container {
     width: 100%;
+    padding-bottom: 40px;
   }
   .swiper-button-prev, .swiper-button-next {
     color: $blue;

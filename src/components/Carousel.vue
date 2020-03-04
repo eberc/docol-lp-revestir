@@ -21,8 +21,14 @@
     <div class="swiper-pagination" />
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev" />
-    <div class="swiper-button-next" />
+    <div
+      v-if="width > 768"
+      class="swiper-button-prev"
+    />
+    <div
+      v-if="width > 768"
+      class="swiper-button-next"
+    />
 
     <!-- If we need scrollbar -->
     <!--     <div class="swiper-scrollbar"></div> -->
@@ -39,6 +45,11 @@ export default {
       type: Array,
       default: null,
     },
+  },
+  data() {
+    return {
+      width: window.innerWidth,
+    }
   },
   mounted() {
     const mySwiper = new Swiper(this.$refs['swiper-carousel'], {
@@ -58,10 +69,15 @@ export default {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+      },
       paginationType: 'bullets',
       // breakpoints
       breakpoints: {
-        320: {
+        768: {
           slidesPerView: 1,
         },
         1066: {
@@ -96,15 +112,10 @@ export default {
   }
   .swiper-container {
     width: 100%;
+    height: 530px;
   }
   .swiper-button-prev, .swiper-button-next {
     color: $blue;
     transform: scale(0.5);
   }
-/*   .swiper-button-prev {
-    left: -25px;
-  }
-  .swiper-button-next {
-    right: -25px;
-  } */
 </style>

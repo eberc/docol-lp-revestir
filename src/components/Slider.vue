@@ -11,9 +11,10 @@
         v-for="(img, index) in images"
         :key="index"
         class="swiper-slide"
-      >
-        <img :src="img">
-      </div>
+        :style="{
+          backgroundImage: `url(${img})`,
+        }"
+      />
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination" />
@@ -23,7 +24,7 @@
     <div class="swiper-button-next" />
 
     <!-- If we need scrollbar -->
-    <div class="swiper-scrollbar" />
+    <!-- <div class="swiper-scrollbar" /> -->
   </div>
 </template>
 
@@ -45,6 +46,8 @@ export default {
       // If we need pagination
       pagination: {
         el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
       },
       // Navigation arrows
       navigation: {
@@ -60,14 +63,17 @@ export default {
   @import '@styles';
   .swiper-slide {
     width: 100%;
-  }
-  .swiper-slide {
-    img {
-      width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    @include breakpoint(md) {
+      height: 290px;
     }
   }
   .swiper-container {
     width: 100%;
+    @include breakpoint(md) {
+      height: 290px;
+    }
   }
   .swiper-button-prev, .swiper-button-next {
     color: $white;

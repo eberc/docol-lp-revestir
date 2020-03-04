@@ -37,6 +37,14 @@ export default {
     position: relative;
     width: 515px;
     height: 450px;
+    @include breakpoint(md) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 335px;
+      height: auto;
+    }
     &__avatar {
       position: absolute;
       top: 0;
@@ -45,6 +53,11 @@ export default {
       height: 340px;
       z-index: 1;
       background-size: cover;
+      @include breakpoint(md) {
+        position: relative;
+        width: 335px;
+        height: 340px;
+      }
     }
     &__info {
       flex: 0 0 auto;
@@ -53,16 +66,26 @@ export default {
       left: 0;
       display: flex;
       flex-direction: column;
-      width: 260px !important;
+      width: 260px;
       height: 300px;
       padding: 30px 30px 0 25px;
       background-color: $white;
       z-index: 2;
+      @include breakpoint(md) {
+        position: relative;
+        top: 0;
+        width: 285px;
+        height: auto;
+        padding: 30px 25px 30px 25px;
+      }
       &__title {
         font-family: 'Muli';
         font-size: 16px;
         font-weight: 700;
         color: $text;
+        &:first-child {
+          margin-top: 0;
+        }
       }
       &__description {
         font-family: 'Muli';
@@ -70,6 +93,9 @@ export default {
         font-weight: 400;
         color: $text;
         line-height: 22px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }

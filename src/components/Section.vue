@@ -40,6 +40,9 @@ export default {
     }
     &--padding-bottom {
       padding-bottom: 80px;
+      @include breakpoint(md) {
+        padding-bottom: 40px;
+      }
     }
     &__wrapper {
       @extend %wrapper;

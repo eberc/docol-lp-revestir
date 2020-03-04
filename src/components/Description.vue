@@ -22,8 +22,11 @@ export default {
     font-weight: 400;
     max-width: 860px;
     color: $text;
-    padding: 0 0 80px 0;
+    padding: 0 20px 80px 20px;
     line-height: 22px;
     margin: 0;
+    @include breakpoint(md) {
+      padding: 0 0 40px 0;
+    }
   }
 </style>
