@@ -162,6 +162,7 @@
       image="/images/foto16.jpg"
       title="Quer receber nosso catálogo de novidades por email?"
       label="SOLICITE"
+      link-url="mailto:comunicação@docol.com.br"
     />
     <vue-section padding-bottom>
       <vue-title>
@@ -177,7 +178,6 @@
       />
       <vue-button
         outline
-        is-link
         link-url="/audio/sample.mp3"
         icon="/icons/download.svg"
       >

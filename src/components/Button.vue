@@ -1,9 +1,9 @@
 <template>
   <div class="btn-container">
     <button
-      v-if="!isLink"
+      v-if="!linkUrl"
       type="button"
-      class="btn"
+      class="btn__default"
       :class="outline ? 'btn--outline' : null"
     >
       <div class="btn-container__wrapper">
@@ -19,7 +19,7 @@
       v-else
       :href="linkUrl"
       class="btn__link"
-      :class="outline ? 'btn--outline' : null"
+      :class="outline ? 'btn--outline' : 'btn__default'"
     >
       <div class="btn-container__wrapper">
         <img
@@ -47,14 +47,6 @@ export default {
       type: Boolean,
       default: null,
     },
-    label: {
-      type: String,
-      default: null,
-    },
-    isLink: {
-      type: Boolean,
-      default: false,
-    },
     linkUrl: {
       type: String,
       default: null,
@@ -80,30 +72,32 @@ export default {
     }
   }
   .btn {
-    background: $blue 0% 0% no-repeat padding-box;
-    box-shadow: 0px 10px 20px #00000029;
-    height: 45px;
-    opacity: 1;
-    font-family: 'Muli';
-    letter-spacing: 1.4px;
-    font-weight: 700;
-    font-size: 14px;
-    border-radius: 3px;
-    padding: 0;
-    margin: 0;
-    text-transform: uppercase;
-    color: $text-light;
-    padding: 0 14px;
+    &__default {
+      background: $blue 0% 0% no-repeat padding-box;
+      box-shadow: 0px 10px 20px #00000029;
+      height: 45px;
+      opacity: 1;
+      font-family: 'Muli';
+      letter-spacing: 1.4px;
+      font-weight: 700;
+      font-size: 14px;
+      width: 190px;
+      border-radius: 3px;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+      color: $text-light;
+      padding: 0 14px;
+    }
     &__link {
       display: flex;
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      border: 2px solid $grey;
       border-radius: 3px;
     }
     &--outline {
-      min-width: 131px;
+      min-width: 130px;
       height: 35px;
       text-align: left;
       font-family: 'Muli';
@@ -113,6 +107,7 @@ export default {
       box-shadow: none;
       background-color: $white;
       border-width: 2px;
+      border: 2px solid $grey;
     }
   }
 </style>

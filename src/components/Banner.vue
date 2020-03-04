@@ -21,6 +21,7 @@
         {{ title }}
       </h2>
       <vue-button
+        :link-url="linkUrl"
         :icon="spotify ? '/icons/spotify.svg' : null"
       >
         {{ label }}
@@ -56,6 +57,10 @@ export default {
       default: null,
     },
     subTitle: {
+      type: String,
+      default: null,
+    },
+    linkUrl: {
       type: String,
       default: null,
     },
