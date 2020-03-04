@@ -73,8 +73,7 @@ export default {
     align-items: center;
     width: 100%;
     height: 500px;
-    background-position-y: -360px;
-    background-position-x: center;
+    background-position: center;
     background-repeat: no-repeat;
     @include breakpoint(md) {
       align-items: flex-end;
