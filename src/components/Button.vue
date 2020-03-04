@@ -1,6 +1,7 @@
 <template>
   <div class="btn-container">
     <button
+      v-if="!isLink"
       type="button"
       class="btn"
       :class="outline ? 'btn--outline' : null"
@@ -14,6 +15,21 @@
         <slot />
       </div>
     </button>
+    <a
+      v-else
+      :href="linkUrl"
+      class="btn__link"
+      :class="outline ? 'btn--outline' : null"
+    >
+      <div class="btn-container__wrapper">
+        <img
+          v-if="icon"
+          class="icon"
+          :src="icon"
+        >
+        <slot />
+      </div>
+    </a>
   </div>
 </template>
 
@@ -32,6 +48,14 @@ export default {
       default: null,
     },
     label: {
+      type: String,
+      default: null,
+    },
+    isLink: {
+      type: Boolean,
+      default: false,
+    },
+    linkUrl: {
       type: String,
       default: null,
     },
@@ -70,6 +94,14 @@ export default {
     text-transform: uppercase;
     color: $text-light;
     padding: 0 14px;
+    &__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      border: 2px solid $grey;
+      border-radius: 3px;
+    }
     &--outline {
       min-width: 131px;
       height: 35px;

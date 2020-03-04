@@ -1,7 +1,7 @@
 <template>
   <div class="player">
     <audio
-      id="player"
+      ref="audio-player"
       controls
     >
       <source
@@ -25,8 +25,8 @@ export default {
     },
   },
   mounted() {
-    const player = new Plyr('#player', {
-      controls: ['play', 'progress', 'mute'],
+    const player = new Plyr(this.$refs['audio-player'], {
+      controls: ['play', 'progress', 'mute', 'volume'],
     })
   },
 }

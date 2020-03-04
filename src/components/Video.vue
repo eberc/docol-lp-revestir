@@ -1,7 +1,7 @@
 <template>
   <div class="video">
     <video
-      id="player"
+      ref="video-player"
       poster="/path/to/poster.jpg"
       playsinline
       controls
@@ -26,7 +26,7 @@ export default {
     },
   },
   mounted() {
-    const player = new Plyr('#player', {
+    const player = new Plyr(this.$refs['video-player'], {
       controls: ['play-large', 'play', 'progress', 'volume'],
     })
   },

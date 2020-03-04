@@ -177,6 +177,8 @@
       />
       <vue-button
         outline
+        is-link
+        link-url="/audio/sample.mp3"
         icon="/icons/download.svg"
       >
         BAIXE O ÁUDIO
