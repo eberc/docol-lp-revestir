@@ -66,7 +66,7 @@
         ]"
       />
     </vue-section>
-    <!-- <vue-slider
+    <vue-slider
       :images="[
         '/images/Foto1.jpg',
         '/images/Foto2.jpg',
@@ -77,7 +77,7 @@
         '/images/Foto7.jpg',
         '/images/Foto8.jpg',
       ]"
-    /> -->
+    />
     <vue-section padding-bottom>
       <vue-title>Curiosidades</vue-title>
       <vue-carousel
