@@ -40,9 +40,13 @@
 
 <script>
 import Swiper from 'swiper'
+import Card from '@components/Card.vue'
 
 export default {
   name: 'VueCarousel',
+  components: {
+    'vue-card': Card,
+  },
   props: {
     cards: {
       type: Array,

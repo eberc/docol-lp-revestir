@@ -30,8 +30,13 @@
 </template>
 
 <script>
+import Button from '@components/Button.vue'
+
 export default {
   name: 'VueBanner',
+  components: {
+    'vue-button': Button,
+  },
   props: {
     image: {
       type: String,

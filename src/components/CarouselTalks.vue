@@ -40,9 +40,13 @@
 
 <script>
 import Swiper from 'swiper'
+import CardTalks from '@components/CardTalks.vue'
 
 export default {
   name: 'VueCarouselTalks',
+  components: {
+    'vue-card-talks': CardTalks,
+  },
   props: {
     cards: {
       type: Array,
