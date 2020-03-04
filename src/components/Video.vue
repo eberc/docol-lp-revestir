@@ -29,7 +29,6 @@ export default {
     const player = new Plyr('#player', {
       controls: ['play-large', 'play', 'progress', 'volume'],
     })
-    player.currentTime = 10 // Seeks to 10 seconds
   },
 }
 </script>
