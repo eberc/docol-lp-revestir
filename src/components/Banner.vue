@@ -8,13 +8,23 @@
     <div
       class="banner__wrapper"
     >
-      <h2 class="banner__title">{{ title }}</h2>
-      <button
-        class="banner__button"
-        type="button"
+      <p
+        v-if="spotify"
+        class="banner__sub-title"
+      >
+        {{ subTitle }}
+      </p>
+      <h2
+        class="banner__title"
+        :class="spotify ? 'banner__title--spotify' : null"
+      >
+        {{ title }}
+      </h2>
+      <vue-button
+        :icon="spotify ? '/icons/spotify.svg' : null"
       >
         {{ label }}
-      </button>
+      </vue-button>
     </div>
   </div>
 </template>
@@ -35,6 +45,14 @@ export default {
       type: String,
       default: null,
     },
+    spotify: {
+      type: Boolean,
+      default: null,
+    },
+    subTitle: {
+      type: String,
+      default: null,
+    },
   },
 }
 </script>
@@ -49,11 +67,12 @@ export default {
     align-items: center;
     width: 100%;
     height: 500px;
-    width: 100%;
-    height: 500px;
-    padding-bottom: 70px;
+    background-position-y: -360px;
+    background-position-x: center;
+    background-repeat: no-repeat;
     @include breakpoint(md) {
       align-items: flex-end;
+      padding-bottom: 70px;
     }
     &__wrapper {
       @extend %wrapper;
@@ -69,23 +88,19 @@ export default {
       color: $text-light;
       margin-top: 0;
       margin-bottom: 50px;
+      &--spotify {
+        width: auto;
+        font-size: 20px;
+        line-height: 25px;
+      }
     }
-    &__button {
-      background: $blue 0% 0% no-repeat padding-box;
-      box-shadow: 0px 10px 20px #00000029;
-      width: 190px;
-      height: 45px;
-      opacity: 1;
+    &__sub-title {
       font-family: 'Muli';
-      letter-spacing: 1.4px;
-      font-weight: 700;
-      font-size: 14px;
-      box-shadow: 0px 10px 20px #00000029;
-      border-radius: 3px;
-      padding: 0;
-      margin: 0;
+      font-size: 13px;
+      font-weight: 300;
       text-transform: uppercase;
-      color: $text-light;
+      margin: 0 0 35px 0;
+      color: $white;
     }
   }
 </style>

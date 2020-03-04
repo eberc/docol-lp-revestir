@@ -172,6 +172,36 @@
       title="Quer receber nosso catálogo de novidades por email?"
       label="SOLICITE"
     />
+    <vue-section padding-bottom>
+      <vue-title>
+        Faça uma visita sonora ao nosso stand
+      </vue-title>
+      <vue-description>
+        Pensando em tornar a visita ao nosso stand mais acessível, preparamos um
+        áudio-guia com os destaques de cada espaço. Aperte o play e faça essa visita
+        com a gente.
+      </vue-description>
+      <vue-player
+        audio="/audio/sample.mp3"
+      />
+      <vue-button
+        outline
+        icon="/icons/download.svg"
+      >
+        BAIXE O ÁUDIO
+      </vue-button>
+    </vue-section>
+    <vue-banner
+      spotify
+      image="/images/Foto17.png"
+      sub-title="PLAYLIST NO SPOTIFY"
+      title="Você sabia que menos de 10 minutos é o tempo recomendado pela ONU para
+      um banho sustentável. A partir desse tempo, você começa a desperdiçar água
+      em excesso. Para te ajudar a controlar o tempo de banho, criamos algumas
+      Playlists de dez minutos. Assim, você pode aproveitar seu momento de banho,
+      sem correr o risco de passar do tempo."
+      label="Ouvir no Spotify"
+    />
   </div>
 </template>
 

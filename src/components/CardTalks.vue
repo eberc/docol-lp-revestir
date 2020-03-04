@@ -28,9 +28,6 @@ export default {
       default: null,
     },
   },
-  mounted() {
-    console.log('card talks', this.card)
-  },
 }
 </script>
 
