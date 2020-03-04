@@ -14,6 +14,7 @@
 
 <script>
 import Plyr from 'plyr'
+import '@styles/_index.scss'
 
 export default {
   name: 'VuePlayer',

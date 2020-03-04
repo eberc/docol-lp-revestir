@@ -31,6 +31,7 @@
 
 <script>
 import Button from '@components/Button.vue'
+import '@styles/_index.scss'
 
 export default {
   name: 'VueBanner',

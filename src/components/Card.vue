@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import '@styles/_index.scss'
+
 export default {
   name: 'VueCard',
   props: {

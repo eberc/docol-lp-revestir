@@ -20,6 +20,8 @@
   </div>
 </template>
 <script>
+import '@styles/_index.scss'
+
 export default {
   name: 'VueCardTalks',
   props: {

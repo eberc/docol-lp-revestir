@@ -41,6 +41,7 @@
 <script>
 import Swiper from 'swiper'
 import Card from '@components/Card.vue'
+import '@styles/_index.scss'
 
 export default {
   name: 'VueCarousel',

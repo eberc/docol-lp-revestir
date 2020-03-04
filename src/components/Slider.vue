@@ -30,6 +30,7 @@
 
 <script>
 import Swiper from 'swiper'
+import '@styles/_index.scss'
 
 export default {
   name: 'VueSlider',

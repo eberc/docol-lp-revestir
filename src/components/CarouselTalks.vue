@@ -41,6 +41,7 @@
 <script>
 import Swiper from 'swiper'
 import CardTalks from '@components/CardTalks.vue'
+import '@styles/_index.scss'
 
 export default {
   name: 'VueCarouselTalks',
