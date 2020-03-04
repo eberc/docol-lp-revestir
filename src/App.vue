@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <vue-video video-src="/videos/sample.mp4" />
     <vue-section>
       <vue-title>
         Viva a Água
@@ -171,7 +172,7 @@
         áudio-guia com os destaques de cada espaço. Aperte o play e faça essa visita
         com a gente.
       </vue-description>
-      <vue-player
+      <vue-audio
         audio="/audio/sample.mp3"
       />
       <vue-button
